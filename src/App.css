@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*-----------------
+  Heading Container
+  -----------------*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+#heading-container{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 100%;
+  height: 15vh;
+  width: 100%;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+#heading{
+  color: rgb(255, 255, 255);
+  margin-left: 5%;
+  font-size: 3em;
+}
+
+#search{
+  width: 70%;
+  height: 40%;
+  margin-left: 15%;
+  border: none;
+  border-radius: 0.2em;
+  background-color: rgb(255, 255, 255);
+}
+
+/*-------
+  Content
+  -------*/
+
+#content-container{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%;
+  align-items: center;
+  height: 85vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
+/*----------
+  Currencies
+  ----------*/
+
+#currencies{
+  height: 80vh;
+  width: 94%;
+  background-color: white;
+  border-radius: 0.35em;
+  margin: 0.5vh 0 0 3%;
+}
+
+#currencies-heading{
+  display: flex;
+  align-items: center;
+  padding-left: 17%;
+  width: 100%;
+  height: 10%;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+hr{
+  margin-left: 2.5%;
+  width: 95%;
+}
+
+#currency-cards{
+  /*See if this works with flexbox*/
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  height: 100%;
+  width: 100%;
+}
+
+.currency-card-template{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  width: 95%;
+  height: 20%;
+  align-items: center;
+  padding: 3% 0 3% 5%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+}
+
+.currency-card-template:hover{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  width: 95%;
+  height: 20%;
+  align-items: center;
+  padding: 4% 0 4% 5%;
+  background-color: rgb(241, 241, 241);
+  border-radius: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+/*-------------
+  Currency Info
+  -------------*/
+
+.currency-info{
+  height: 80vh;
+  width: 99%;
+  background-color: white;
+  border-radius: 0.35em;
+  margin: 0.5vh 0 0 0;
+}
+
+.currency-info-heading{
+  display: flex;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1em 0 1em 0;
 }
 
-.App-link {
-  color: #61dafb;
+.currency-image-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.currency-image{
+  display: flex;
+  height: 100px;
+  align-self: center;
+}
+
+.currency-info-stats-container{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+}
+
+.currency-info-stats{
+  display: flex;
+  width: 100%;
+  padding: 1em 0 1em 2em;
+  font-size: larger;
+}
+
+#positive{
+  color: green;
+}
+
+#negative{
+  color: red;
 }
